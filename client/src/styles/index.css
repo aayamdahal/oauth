@@ -1,0 +1,39 @@
+.navbar {
+  height: 50px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.listitem {
+  margin-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.home {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
