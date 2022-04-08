@@ -1,11 +1,15 @@
 import React from "react";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import { Login } from "./pages/Login";
+import Post from "./pages/Post";
 const App = () => {
   return (
     <div>
       <NavBar />
-      <Home />
+      {/* <Home /> */}
+      {/* <Post /> */}
+      <Login />
     </div>
   );
 };

@@ -12,13 +12,14 @@ import {
 const MainCard = ({ post }) => {
   const theme = useMantineTheme();
   const secondaryColor =
-    theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
+  
+  theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
   return (
     <div>
       <div style={{ width: 340, margin: "auto" }}>
         <Card shadow="sm" p="lg">
           <Card.Section>
-            <Image src={post.img} height={160} alt="Norway" />
+            <Image src={post.img} height={160} />
           </Card.Section>
 
           <Group
@@ -31,9 +32,19 @@ const MainCard = ({ post }) => {
             </Badge>
           </Group>
 
-          <Text size="sm" style={{ color: secondaryColor, lineHeight: 1.5 }}>
+          <Text
+            size="sm"
+            style={{
+              color: secondaryColor,
+              lineHeight: 1.5,
+              marginBottom: "1rem",
+            }}
+          >
             {post.desc}
           </Text>
+          <Button variant="light" color="violet" size="md">
+            Read More
+          </Button>
         </Card>
       </div>
     </div>

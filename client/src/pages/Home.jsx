@@ -1,6 +1,6 @@
 import React from "react";
 import { posts } from "../data";
-import MainCard from "./MainCard";
+import MainCard from "../components/MainCard";
 import "../styles/index.css";
 
 const Home = () => {
