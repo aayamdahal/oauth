@@ -1,8 +1,10 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { posts } from "../data";
 
 const Post = () => {
-  const post = posts[2];
+  const location = useLocation();
+  console.log(">>>", location);
   return (
     <div className="post">
       <img src={post.img} alt="" className="post-img" />

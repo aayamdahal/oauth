@@ -2,7 +2,7 @@ import { Button, Divider } from "@mantine/core";
 import React from "react";
 import { BsGoogle, BsFacebook, BsGithub } from "react-icons/bs";
 
-export const Login = () => {
+ const Login = () => {
   return (
     <div>
       <div className="login py-3">
@@ -50,3 +50,4 @@ export const Login = () => {
     </div>
   );
 };
+export default Login
