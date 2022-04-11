@@ -1,15 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/index.css";
-const NavBar = () => {
+import img from "../styles/img.png";
+const NavBar = ({ user }) => {
   return (
     <div className="navbar">
-      <span className="logo">Logo</span>
-      <ul className="list">
-        <li className="listitem">
-          <div className="avatar"></div>
-        </li>
-        <li className="listitem">Logout</li>
-      </ul>
+      <Link className="logo" to="/">
+        Logo
+      </Link>
+      {user ? (
+        <ul className="list">
+          <li className="listitem">
+            <img src={img} className="avatar" alt="test" />
+          </li>
+          <li className="listitem">Logout</li>
+        </ul>
+      ) : (
+        <Link to="login" className="link">
+          Login
+        </Link>
+      )}
     </div>
   );
 };
