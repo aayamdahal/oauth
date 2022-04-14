@@ -2,14 +2,17 @@ import { Button, Divider } from "@mantine/core";
 import React from "react";
 import { BsGoogle, BsFacebook, BsGithub } from "react-icons/bs";
 
- const Login = () => {
+const Login = () => {
+  const google = () => {
+    window.open("http://localhost:5000/auth/google", "_self");
+  };
   return (
     <div>
       <div className="login py-3">
         <h1 className="login-title mb-4">Choose a login method</h1>
         <div className="wrapper">
           <div className="left">
-            <div className="login-btn google">
+            <div className="login-btn google" onClick={google}>
               <BsGoogle /> <span>Login with Google</span>
             </div>
             <div className="login-btn facebook">
@@ -50,4 +53,4 @@ import { BsGoogle, BsFacebook, BsGithub } from "react-icons/bs";
     </div>
   );
 };
-export default Login
+export default Login;
