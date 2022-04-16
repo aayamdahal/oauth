@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/index.css";
 import img from "../styles/img.png";
 const NavBar = ({ user }) => {
+  console.log(user);
   const logout = () => {
     window.open("http://localhost:5000/auth/logout", "_self");
   };
@@ -14,9 +15,14 @@ const NavBar = ({ user }) => {
       {user ? (
         <ul className="list">
           <li className="listitem">
-            <img src={img} className="avatar" alt="test" />
+            <img src={user.photos[0].value} className="avatar" />
           </li>
-          <li className="listitem" onClick={logout}>
+          <li> {user.displayName}</li>
+          <li
+            className="listitem"
+            onClick={logout}
+            style={{ marginLeft: "10px" }}
+          >
             Logout
           </li>
         </ul>

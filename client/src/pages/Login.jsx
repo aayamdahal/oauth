@@ -6,6 +6,12 @@ const Login = () => {
   const google = () => {
     window.open("http://localhost:5000/auth/google", "_self");
   };
+  const github = () => {
+    window.open("http://localhost:5000/auth/github", "_self");
+  };
+  const facebook = () => {
+    window.open("http://localhost:5000/auth/facebook", "_self");
+  };
   return (
     <div>
       <div className="login py-3">
@@ -15,10 +21,10 @@ const Login = () => {
             <div className="login-btn google" onClick={google}>
               <BsGoogle /> <span>Login with Google</span>
             </div>
-            <div className="login-btn facebook">
+            <div className="login-btn facebook" onClick={facebook}>
               <BsFacebook /> <span>Login with Facebook</span>
             </div>
-            <div className="login-btn github">
+            <div className="login-btn github" onClick={github}>
               <BsGithub /> <span>Login with Github</span>
             </div>
           </div>
